@@ -5,8 +5,6 @@ description: 色谱网，提供最新最全的新闻资讯
 url: "http://www.sep10.com"
 markdown: kramdown
 safe: true
-paginate: 30
-paginate_path: "posts/page:num"
 
 links:
   - http://www.bug.im/|虫虫传媒
