@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="main cc">
+  <div class="main_body">
+    <div class="main_center">
+      <div class="post">
+        {% assign words = page.title | split: ' - ' %}
+        <h3 class="title">{{ words.first }}</h3>
+        {{ content }}
+      </div>
+    </div>
+  </div>
+  {% include right.html %}
+</div>
+<div class="c mb20"></div>
+{% include footer.html %}

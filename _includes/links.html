@@ -1,0 +1,15 @@
+<div id="about">
+  <div class="sharelinks mb10 cc">
+    <div class="view-hover">
+      <dl>
+        <dt>友情链接</dt>
+        <dd>
+          {% for link in site.links %}
+            {% assign words = link | split: '|' %}
+            <a href="{{ words.first }}" target="_blank" title="{{ words.last }}">{{ words.last }}</a>
+          {% endfor %}
+        </dd>
+      </dl>
+    </div>
+  </div>
+</div>

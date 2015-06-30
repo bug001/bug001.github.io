@@ -1,0 +1,255 @@
+---
+layout: index
+---
+
+<div class="pin_box cc">
+  <div class="hd">
+    <h3><a href="/a.html" target="_blank">国内新闻</a></h3>
+  </div>
+  <div class="bd">
+    <div class="item cc">
+      <div class="nright rdtag w360 fl ">
+        <div class="view-hover">
+          <dl>
+            <dt>
+                <img src="/static/news.jpg" alt="国内新闻" width="130" height="130'">
+            </dt>
+            <dd>
+              {% for post in site.categories.a limit:1 %}
+                {% assign words = post.title | split: ' - ' %}
+                <h3><a href="{{post.url}}" target="_blank">{{words.first}}</a></h3>
+                <p>
+                  <a class="gray" href="{{ post.url }}" target="_blank">{{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}</a>
+                </p>
+              {% endfor %}
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <div class="fr w360">
+        <div class="public_cont">
+          <div class="view-hover">
+            <ul>
+              {% for post in site.categories.a limit:5 offset:1 %}
+                {% assign words = post.title | split: ' - ' %}
+                <li style="padding-right: 5px">
+                  <a class="f14 title" href="{{post.url}}" title="{{words.first}}" target="_blank">{{words.first}}</a><em>{{post.date | date:"%H:%M %d/%m"}}</em>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pin_box cc">
+  <div class="hd">
+    <h3><a href="/b.html" target="_blank">国际资讯</a></h3>
+  </div>
+  <div class="bd">
+    <div class="item cc">
+      <div class="nright rdtag w360 fl ">
+        <div class="view-hover">
+          <dl>
+            <dt>
+                <img src="/static/guoji.jpg" alt="国际资讯" width="130" height="130'">
+            </dt>
+            <dd>
+              {% for post in site.categories.b limit:1 %}
+                {% assign words = post.title | split: ' - ' %}
+                <h3><a href="{{post.url}}" target="_blank">{{words.first}}</a></h3>
+                <p>
+                  <a class="gray" href="{{ post.url }}" target="_blank">{{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}</a>
+                </p>
+              {% endfor %}
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <div class="fr w360">
+        <div class="public_cont">
+          <div class="view-hover">
+            <ul>
+              {% for post in site.categories.b limit:5 offset:1 %}
+                {% assign words = post.title | split: ' - ' %}
+                <li style="padding-right: 5px">
+                  <a class="f14 title" href="{{post.url}}" title="{{words.first}}" target="_blank">{{words.first}}</a><em>{{post.date | date:"%H:%M %d/%m"}}</em>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pin_box cc">
+  <div class="hd">
+    <h3><a href="/c.html" target="_blank">体育头条</a></h3>
+  </div>
+  <div class="bd">
+    <div class="item cc">
+      <div class="nright rdtag w360 fl ">
+        <div class="view-hover">
+          <dl>
+            <dt>
+                <img src="/static/tiyu.jpg" alt="体育头条" width="130" height="130'">
+            </dt>
+            <dd>
+              {% for post in site.categories.c limit:1 %}
+                {% assign words = post.title | split: ' - ' %}
+                <h3><a href="{{post.url}}" target="_blank">{{words.first}}</a></h3>
+                <p>
+                  <a class="gray" href="{{ post.url }}" target="_blank">{{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}</a>
+                </p>
+              {% endfor %}
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <div class="fr w360">
+        <div class="public_cont">
+          <div class="view-hover">
+            <ul>
+              {% for post in site.categories.c limit:5 offset:1 %}
+                {% assign words = post.title | split: ' - ' %}
+                <li style="padding-right: 5px">
+                  <a class="f14 title" href="{{post.url}}" title="{{words.first}}" target="_blank">{{words.first}}</a><em>{{post.date | date:"%H:%M %d/%m"}}</em>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pin_box cc">
+  <div class="hd">
+    <h3><a href="/d.html" target="_blank">科技频道</a></h3>
+  </div>
+  <div class="bd">
+    <div class="item cc">
+      <div class="nright rdtag w360 fl ">
+        <div class="view-hover">
+          <dl>
+            <dt>
+                <img src="/static/keji.jpg" alt="科技频道" width="130" height="130'">
+            </dt>
+            <dd>
+              {% for post in site.categories.d limit:1 %}
+                {% assign words = post.title | split: ' - ' %}
+                <h3><a href="{{post.url}}" target="_blank">{{words.first}}</a></h3>
+                <p>
+                  <a class="gray" href="{{ post.url }}" target="_blank">{{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}</a>
+                </p>
+              {% endfor %}
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <div class="fr w360">
+        <div class="public_cont">
+          <div class="view-hover">
+            <ul>
+              {% for post in site.categories.d limit:5 offset:1 %}
+                {% assign words = post.title | split: ' - ' %}
+                <li style="padding-right: 5px">
+                  <a class="f14 title" href="{{post.url}}" title="{{words.first}}" target="_blank">{{words.first}}</a><em>{{post.date | date:"%H:%M %d/%m"}}</em>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pin_box cc">
+  <div class="hd">
+    <h3><a href="/e.html" target="_blank">财经快讯</a></h3>
+  </div>
+  <div class="bd">
+    <div class="item cc">
+      <div class="nright rdtag w360 fl ">
+        <div class="view-hover">
+          <dl>
+            <dt>
+                <img src="/static/caijing.jpg" alt="财经快讯" width="130" height="130'">
+            </dt>
+            <dd>
+              {% for post in site.categories.e limit:1 %}
+                {% assign words = post.title | split: ' - ' %}
+                <h3><a href="{{post.url}}" target="_blank">{{words.first}}</a></h3>
+                <p>
+                  <a class="gray" href="{{ post.url }}" target="_blank">{{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}</a>
+                </p>
+              {% endfor %}
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <div class="fr w360">
+        <div class="public_cont">
+          <div class="view-hover">
+            <ul>
+              {% for post in site.categories.e limit:5 offset:1 %}
+                {% assign words = post.title | split: ' - ' %}
+                <li style="padding-right: 5px">
+                  <a class="f14 title" href="{{post.url}}" title="{{words.first}}" target="_blank">{{words.first}}</a><em>{{post.date | date:"%H:%M %d/%m"}}</em>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pin_box cc">
+  <div class="hd">
+    <h3><a href="/f.html" target="_blank">娱乐生活</a></h3>
+  </div>
+  <div class="bd">
+    <div class="item cc">
+      <div class="nright rdtag w360 fl ">
+        <div class="view-hover">
+          <dl>
+            <dt>
+                <img src="/static/yule.jpg" alt="娱乐生活" width="130" height="130'">
+            </dt>
+            <dd>
+              {% for post in site.categories.f limit:1 %}
+                {% assign words = post.title | split: ' - ' %}
+                <h3><a href="{{post.url}}" target="_blank">{{words.first}}</a></h3>
+                <p>
+                  <a class="gray" href="{{ post.url }}" target="_blank">{{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}</a>
+                </p>
+              {% endfor %}
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <div class="fr w360">
+        <div class="public_cont">
+          <div class="view-hover">
+            <ul>
+              {% for post in site.categories.f limit:5 offset:1 %}
+                {% assign words = post.title | split: ' - ' %}
+                <li style="padding-right: 5px">
+                  <a class="f14 title" href="{{post.url}}" title="{{words.first}}" target="_blank">{{words.first}}</a><em>{{post.date | date:"%H:%M %d/%m"}}</em>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

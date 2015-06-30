@@ -1,0 +1,20 @@
+---
+layout: list
+---
+
+<div class="pin_box cc">
+  <div class="hd">
+    <h3><a href="/e.html" target="_blank">财经快讯</a></h3>
+  </div>
+  <div class="bd">
+    <table style="width: 100%;">
+    {% for post in site.categories.e limit:30 %}
+      {% assign words = post.title | split: ' - ' %}
+      <tr style="height: 30px;">
+        <td style="width: 75%; padding-left: 50px;"><a class="f14 title" href="{{post.url}}" title="{{words.first}}" target="_blank">{{words.first}}</a></td>
+        <td style="width: 25%;"><em>{{post.date | date:"%Y-%m-%d %H:%M:%S"}}</em></td>
+      </tr>
+    {% endfor %}
+    </table>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="main_sidebar fr">
+  <div class="cc mt10">
+    <div class="view-hover">
+      <img src="/static/tagsyun.jpg" width="250" height="250px">
+    </div>
+  </div>
+  <div class="c mb10"></div>
+  <div class="view-hover">
+    <div class="public_cont w250">
+      <h3 class="tit">最新发布<span class="triangle"></span></h3>
+      <ul>
+        {% for post in site.posts limit:10 %}
+          {% assign words = post.title | split: ' - ' %}
+          <li style="padding-left: 10px">
+            <a class="f14" href="{{post.url}}" title="{{words.first}}" target="_blank">{{words.first | truncate:17}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="c mb10"></div>
+  <div class="view-hover">
+    <img src="/static/xpic7370.jpg" width="250">
+  </div>
+  <div class="c mb10"></div>
+  <div class="view-hover">
+    <div class="public_cont w250">
+      <h3 class="tit">近期热点<span class="triangle"></span></h3>
+      <ul>
+        {% for post in site.posts limit:10 offset:10 %}
+          {% assign words = post.title | split: ' - ' %}
+          <li style="padding-left: 10px">
+            <a class="f14" href="{{post.url}}" title="{{words.first}}" target="_blank">{{words.first | truncate:17}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="c mb10"></div>
+  <div class="view-hover">
+    <img src="/static/guanzhu.jpg" width="250">
+  </div>
+</div>
